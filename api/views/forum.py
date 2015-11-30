@@ -1,9 +1,8 @@
-import json
 from flask import Blueprint, request
 from api.models import forum, post, thread
 from utils.helpers import *
 from config import *
-
+import simplejson as json
 
 module = Blueprint('forum', __name__, url_prefix='/db/api/forum')
 

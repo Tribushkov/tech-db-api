@@ -1,8 +1,8 @@
-import json
 from flask import Blueprint, request
 from api.models import user, post, follower
 from utils.helpers import *
 from config import *
+import simplejson as json
 
 module = Blueprint('user', __name__, url_prefix='/db/api/user')
 

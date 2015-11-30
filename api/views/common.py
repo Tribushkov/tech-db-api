@@ -1,7 +1,7 @@
 from api.models.common import clear, status
 from flask import Blueprint
 from config import *
-import json
+import simplejson as json
 
 module = Blueprint('common', __name__, url_prefix='/db/api')
 
