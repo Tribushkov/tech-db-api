@@ -13,6 +13,7 @@ def clear_db():
     except:
         pass
     response = STATUS_CODE['OK']
+    response['response'] = 'done'
     return json.dumps(response)
 
 
