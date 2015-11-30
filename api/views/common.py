@@ -8,7 +8,10 @@ module = Blueprint('common', __name__, url_prefix='/db/api')
 
 @module.route("/clear/", methods=['POST', 'GET'])
 def clear_db():
-    clear()
+    try:
+        clear()
+    except:
+        pass
     response = STATUS_CODE['OK']
     return json.dumps(response)
 

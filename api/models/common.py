@@ -2,12 +2,14 @@ from data_provider import sql
 
 
 def clear():
-    tables = ['post', 'thread', 'forum', 'subscription', 'follower', 'user']
-    sql.execute("SET global foreign_key_checks = 0;")
-    for table in tables:
-        sql.execute("TRUNCATE TABLE %s;" % table)
-    sql.execute("SET global foreign_key_checks = 1;")
-
+    try:
+        tables = ['post', 'thread', 'forum', 'subscription', 'follower', 'user']
+        sql.execute("SET global foreign_key_checks = 0;")
+        for table in tables:
+            sql.execute("TRUNCATE TABLE %s;" % table)
+        sql.execute("SET global foreign_key_checks = 1;")
+    except:
+        pass
 
 def status():
     resp = []
