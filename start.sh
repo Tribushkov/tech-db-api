@@ -1,3 +1,3 @@
 #!/bin/bash
-gunicorn -c gunicorn_conf.py wsgi:app
+gunicorn -c conf/gunicorn_conf.py wsgi:app
 echo
